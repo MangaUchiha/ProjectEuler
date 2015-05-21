@@ -14,5 +14,5 @@ def namevalue(n):
 total = 0
 
 for el in names:
-	total += namevalue(el) * names.index(el)
+	total += namevalue(el) * ( names.index(el) + 1 )
 print total
