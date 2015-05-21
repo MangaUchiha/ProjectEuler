@@ -16,8 +16,8 @@ daysinmonth = {
 }
 
 counter = 0
-now = 0
-for j in range(1901,2002):
+now = 365%7
+for j in range(1901,2001):
 	for i in daysinmonth:
 		now += daysinmonth[i]
 		if i == 2 and j%4 == 0 and j%100 != 0:
