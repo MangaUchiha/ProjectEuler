@@ -1,13 +1,27 @@
 #!/usr/bin/python
 
-counter = 0
-week = 1
+daysinmonth = {
+	0 : 31,
+	1 : 28,
+	2 : 31,
+	3 : 30,
+	4 : 31,
+	5 : 30,
+	6 : 31,
+	7 : 31,
+	8 : 30,
+	9 : 31,
+	10 : 30,
+	11 : 31
+}
 
-for m in range(1,13)
-	if m in (4, 6, 9, 11):
-		for d in range (1,31):
-			week += 1
-			if week == 7 and j == 1:
-				counter += 1
-	if m == 2:
-		if y 
+counter = 0
+now = 0
+for j in range(1901,2002):
+	for i in daysinmonth:
+		now += daysinmonth[i]
+		if i == 2 and j%4 == 0 and j%100 != 0:
+			now += 1
+		if now % 7 == 6:
+			counter += 1
+print counter
