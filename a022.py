@@ -7,8 +7,8 @@ def namevalue(n):
 	x = ord('A') - 1
 	l = len(n)
 	tot = 0
-	for el in range(0,l-1):
-		tot += ord(n[el]) - x
+	for ch in n:
+		tot += ord(ch) - x
 	return tot
 
 total = 0
